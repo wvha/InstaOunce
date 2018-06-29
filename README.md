@@ -1,1 +1,1 @@
-# InstaOunce
+This is an Instagram clone created using React Native.
