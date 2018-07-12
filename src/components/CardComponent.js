@@ -5,6 +5,13 @@ import { Card, CardItem, Thumbnail, Body, Left, Right, Button, Icon } from 'nati
 
 export default class CardComponent extends Component {
   render() {
+
+    // for now
+    const images = {
+      '1': require('../assets/feed_images/1.png'),
+      // '2': require('../assets/feed_images/2.png'),
+      // '3': require('../assets/feed_images/3.png'),
+    }
     return (
       <Card>
         <CardItem>
@@ -18,7 +25,7 @@ export default class CardComponent extends Component {
         </CardItem>
 
         <CardItem cardBody>
-          <Image source={require('../assets/feed_images/1.png')}
+          <Image source={ images[this.props.imageSource] }
             style={{ height: 400, width: null, flex: 1 }}
           />
         </CardItem>
@@ -41,7 +48,7 @@ export default class CardComponent extends Component {
         </CardItem>
 
         <CardItem style={{ height: 35 }}>
-          <Body><Text>999 likes</Text></Body>
+          <Body><Text>{ this.props.likes }</Text></Body>
         </CardItem>
 
         <CardItem>
